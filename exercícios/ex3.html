@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Luiz Henrique e Renan Fagundes-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 3</title>
+        <style>
+            body 
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Exemplo 1--> 
+
+        <h3>getElementById</h3>
+        <p>Retorna a referência do elemento através do seu ID.</p>
+        <p>Exemplo alterando a cor do texto:</p>
+        <p id="elemento1">Mudar a cor.</p>
+        <button onclick="mudar_cor_ID('blue');">Azul</button>
+        <button onclick="mudar_cor_ID('red');">Vermelho</button>
+        <hr>
+
+        <script>
+            function mudar_cor_ID(cor_diferente)
+            {
+                var elemento = document.getElementById("elemento1");
+                elemento.style.color = cor_diferente;
+            }
+        </script>
+
+        <!--Exemplo 2-->
+
+        <h3>getElementsByTagName</h3>
+        <p>Retorna uma coleção de elementos com uma tag (etiqueta) específica.</p>
+        <p>Exemplo alterando a cor do texto da tag i:</p>
+        <p><i>Mudar a cor.</i></p>
+        <button onclick="mudar_cor_tag();">Vermelho</button>
+        <hr>
+
+        <script>
+            function mudar_cor_tag()
+            {
+                const collection = document.getElementsByTagName("i");
+                for (let i = 0; i < collection.length; i++) 
+                {
+                    collection[i].style.backgroundColor = "red";
+                }
+            }
+        </script>
+
+        <!--Exemplo 3-->
+
+        <h3>getElementsByClassName</h3>
+        <p>Retorna uma coleção de elementos de uma class (classe) nomiada.</p>
+        <p>Exemplo alterando a cor do texto da tag h4:</p>
+        <h4 class="mudar_cor">Mudar a cor.</h4>
+        <button onclick="mudar_cor_classe();">Azul</button>
+        <hr>
+
+        <script>
+            function mudar_cor_classe()
+            {
+                const collection = document.getElementsByClassName("mudar_cor");
+                for (let i = 0; i < collection.length; i++) 
+                {
+                    collection[i].style.backgroundColor = "blue";
+                }
+            }
+        </script>
+
+        <!--Exemplo 4-->
+
+        <h3>querySelector</h3>
+        <p>Este método retorna o primeiro elemento que corresponde a um seletor CSS.</p>
+        <p>Exemplo alterando a cor do primeiro elemento que aparece:</p>
+        <p class="example">Mudar a cor.</p>
+        <p class="example">Mudar a cor.</p>
+        <button onclick="selecionar_elemento();">Verde</button>
+        <hr>
+
+        <script>
+            function selecionar_elemento()
+            {
+                document.querySelector("p.example").style.backgroundColor = "green";
+            }
+        </script>
+
+        <!--Exemplo 5-->
+
+        <h3>querySelectorAll</h3>
+        <p>Este método retorna todos os elementos que correspondem a um seletor CSS.</p>
+        <p>Exemplo alterando a cor dos dois elementos:</p>
+        <p class="example2">Mudar a cor.</p>
+        <p class="example2">Mudar a cor.</p>
+        <button onclick="selecionar_todos_elementos();">Amarelo</button>
+
+        <script>
+            function selecionar_todos_elementos()
+            {
+                const nodeList = document.querySelectorAll(".example2");
+                for (let i = 0; i < nodeList.length; i++) 
+                {
+                    nodeList[i].style.backgroundColor = "yellow";
+                }
+            }
+        </script>
+    </body>
+</html>

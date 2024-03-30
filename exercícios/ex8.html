@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Luiz Henrique e Renan Fagundes-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 8</title>
+        <style>
+            body 
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="number" id="valor1" placeholder="Digite o 1° número">
+        <input type="number" id="valor2" placeholder="Digite o 2° número">
+        <button onclick="calcular_soma()">Calcular Soma</button>
+        <p id="resultado"></p>
+        <script>
+            function calcular_soma() 
+            {
+                const valor1 = parseFloat(document.getElementById('valor1').value);
+                const valor2 = parseFloat(document.getElementById('valor2').value);
+
+                const resultado = valor1 + valor2;
+
+                document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+            }
+        </script>
+    </body>
+</html>

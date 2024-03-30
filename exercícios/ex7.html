@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Luiz Henrique e Renan Fagundes-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 7</title>
+        <style>
+            body 
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="caixa_texto" placeholder="Digite aqui">
+        <button onclick="converterParaMaiusculas()">Converter para caixa alta</button>
+        <p id="resultado"></p>
+        <script>
+            function converterParaMaiusculas() 
+            {
+                const inputElement = document.getElementById('caixa_texto');
+                const resultadoElement = document.getElementById('resultado');
+
+                const textoDigitado = inputElement.value;
+                const textoEmMaiusculas = textoDigitado.toUpperCase();
+
+                resultadoElement.textContent = `${textoEmMaiusculas}`;
+            }
+        </script>
+    </body>
+</html>
