@@ -1,2 +1,2 @@
-# pam2_luiz_renan
+# pam2_luiz
 Aulas da Etec Fernando Prestes.
